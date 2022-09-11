@@ -1,0 +1,86 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body main .countdown-container #time-left, body main .countdown-container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background-color: chocolate;
+}
+body header {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 5vh;
+  color: #555;
+}
+body main .countdown-container {
+  box-shadow: #ffb55e 0px 0px 0px 2px inset, bisque 10px -10px 0px -3px, #ffb55e 10px -10px, bisque 20px -20px 0px -3px, #ffb55e 20px -20px, bisque 30px -30px 0px -3px, #ffb55e 30px -30px, bisque 40px -40px 0px -3px, #ffb55e 40px -40px;
+  width: 65vw;
+  height: 40vh;
+  background-color: bisque;
+  position: absolute;
+}
+body main .countdown-container #timer-mode-text {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #555;
+  margin-top: 1.25rem;
+  background-color: darksalmon;
+  width: 50%;
+  position: inherit;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0;
+  border-radius: 25px;
+}
+body main .countdown-container #timer-mode-text-left {
+  cursor: pointer;
+  pointer-events: none;
+}
+body main .countdown-container #timer-mode-text-left::before {
+  content: "⇽";
+  pointer-events: all;
+}
+body main .countdown-container #timer-mode-text-right {
+  cursor: pointer;
+  pointer-events: all;
+}
+body main .countdown-container #timer-mode-text-right::after {
+  content: "⇾";
+}
+body main .countdown-container #time-left {
+  font-size: 5.25rem;
+  color: #555;
+  position: absolute;
+}
+body main .countdown-container #timer-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.75rem 1.05rem;
+  margin: 2.25rem 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: darksalmon;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  box-shadow: 6px 2px 9px 2px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease-in-out;
+}
+body main .countdown-container #timer-btn:active {
+  scale: 0.95;
+  box-shadow: none;
+}

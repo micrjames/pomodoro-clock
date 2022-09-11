@@ -1,0 +1,82 @@
+@import 'utils/config', 'utils/utils', 'utils/button';
+
+$primary-color: chocolate;
+$secondary-color: bisque;
+$text-color: #555;
+$btn-color: darksalmon;
+body {
+   background-color: $primary-color;
+
+   header {
+	   text-align: center;
+	   font-size: 2.5rem;
+	   padding-top: 5vh;
+	   color: $text-color;
+   }
+   main {
+	  .countdown-container {
+   box-shadow: darken($secondary-color, 20) 0px 0px 0px 2px inset, $secondary-color 10px -10px 0px -3px, darken($secondary-color, 20) 10px -10px, $secondary-color 20px -20px 0px -3px, darken($secondary-color, 20) 20px -20px, $secondary-color 30px -30px 0px -3px, darken($secondary-color, 20) 30px -30px, $secondary-color 40px -40px 0px -3px, darken($secondary-color, 20) 40px -40px;
+	   width: 65vw;
+	   height: 40vh;
+	   background-color: $secondary-color;
+
+	   position: absolute;
+	   @extend %center-object;
+
+	   #timer-mode-text {
+		  text-align: center;
+		  font-size: 1.75rem;
+		  color: $text-color;
+		  margin-top: 1.25rem;
+
+		  background-color: $btn-color;
+		  width: 50%;
+		  position: inherit;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  padding: 0.5rem 0;
+		  border-radius: 25px;
+
+		  &-left {
+			 cursor: pointer;
+			 pointer-events: none;
+			 &::before {
+				content: "\21fd";
+				pointer-events: all;
+			 }
+		  }
+		  &-value {
+		  }
+		  &-right {
+			 cursor: pointer;
+			 pointer-events: all;
+			 &::after {
+				content: "\21fe";
+			 }	
+		  }
+	   }
+	   #time-left {
+		  font-size: 5.25rem;
+		  color: $text-color;
+		  position: absolute;
+		  @extend %center-object;
+	   }
+	   #timer-btn {
+		  @include button(1rem, 0.75rem 1.05rem, 2.25rem 0);
+		  position: absolute;
+		  background-color: $btn-color;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  bottom: 0;
+		  box-shadow: 6px 2px 9px 2px rgba(0, 0, 0, 0.6); 
+
+		  @include transition-ease;
+
+		  &:active {
+			 scale: 0.95;
+			 box-shadow: none;
+		  }
+	   }
+	  }
+   }
+}
