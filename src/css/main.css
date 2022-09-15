@@ -11,6 +11,10 @@ body main .countdown-container #time-left, body main .countdown-container {
   transform: translate(-50%, -50%);
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   background-color: chocolate;
 }
