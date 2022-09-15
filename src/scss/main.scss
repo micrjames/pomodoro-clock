@@ -10,7 +10,7 @@ body {
    header {
 	   text-align: center;
 	   font-size: 2.5rem;
-	   padding-top: 5vh;
+	   padding-top: 10vh;
 	   color: $text-color;
    }
    main {
@@ -34,12 +34,13 @@ body {
 		  position: inherit;
 		  left: 50%;
 		  transform: translateX(-50%);
-		  padding: 0.5rem 0;
+		  padding: 0.25rem 0;
 		  border-radius: 25px;
 
 		  &-left {
 			 cursor: pointer;
 			 pointer-events: none;
+			 font-size: 2rem;
 			 &::before {
 				content: "\21fd";
 				pointer-events: all;
@@ -50,6 +51,7 @@ body {
 		  &-right {
 			 cursor: pointer;
 			 pointer-events: all;
+			 font-size: 2rem;
 			 &::after {
 				content: "\21fe";
 			 }	
@@ -62,7 +64,7 @@ body {
 		  @extend %center-object;
 	   }
 	   #timer-btn {
-		  @include button(1rem, 0.75rem 1.05rem, 2.25rem 0);
+		  @include button(1rem, 0.5rem 1rem, 2.25rem 0);
 		  position: absolute;
 		  background-color: $btn-color;
 		  left: 50%;
