@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A framework to quickly setup a typescript code testing framework.",
   "main": "index.js",
-   "directories": {
+  "directories": {
     "test": "tests"
   },
   "scripts": {
@@ -16,8 +16,11 @@
     "@babel/core": "^7.23.5",
     "@babel/preset-env": "^7.23.5",
     "@babel/preset-typescript": "^7.23.3",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "babel-jest": "^29.7.0",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "jsdom": "^25.0.1"
   },
   "dependencies": {
     "@types/jest": "^29.5.11"
